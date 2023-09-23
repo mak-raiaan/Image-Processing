@@ -32,8 +32,10 @@ Welcome to the Image Preprocessing Repository! This collection of image processi
 - [**Morphological Snake**](morphological%20snake): Folder with initial morphological snake scripts.
 - [**Skimage Thresholding**](skimage%20thresholding): Folder containing scripts for skimage thresholding.
 
-<details>
-<summary>📚 References</summary>
+
+## 📖 Published Papers
+
+Explore some of my published papers related to image processing and deep learning:
 <p>
 
 1. **A Lightweight Robust Deep Learning Model Gained High Accuracy in Classifying a Wide Range of Diabetic Retinopathy Images**
@@ -85,7 +87,7 @@ Welcome to the Image Preprocessing Repository! This collection of image processi
      }
      ```
 </p>
-</details>
+
 
 ## 📫 How to Reach Me
 
