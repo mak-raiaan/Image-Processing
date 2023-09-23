@@ -1,0 +1,26 @@
+mport os
+import numpy as np
+import nibabel as nib
+import imageio
+import matplotlib
+from nibabel.viewers import OrthoSlicer3D
+from matplotlib import pylab as plt
+
+def read_niifile(niifilepath):
+    img = nib.load(niifilepath) 
+    img_fdata = img.get_fdata() 
+    return img_fdata
+ 
+def save_fig(niifilepath,savepath):
+    fdata = read_niifile(niifilepath) 
+    (x,y,z) = fdata.shape 
+    for k in range(z):
+        silce = fdata[:,k,:] #Three positions represent three slices with different angles
+        imageio.imwrite(os.path.join(savepath,'{}.png'.format(k)),silce)
+                                                                                 #Save the slice as png format
+if name=='main':
+    niifilepath=r"C:\Users\DCL\OneDrive\Documents\others\inam\BraTS20_Training_001\BraTS20_Training_001\BraTS20_Training_001_flair.nii"
+    savepath=r"C:\Users\DCL\OneDrive\Documents\others\inam\flair y"
+    if not os.path.exists(savepath):
+        os.makedirs(savepath)
+    save_fig(niifilepath,savepath)

@@ -1,0 +1,42 @@
+#morphological snake
+
+import numpy as np
+import matplotlib.pyplot as plt
+from skimage import data, img_as_float
+from skimage.segmentation import (morphological_chan_vese,
+                                  morphological_geodesic_active_contour,
+                                  inverse_gaussian_gradient,
+                                  checkerboard_level_set)
+
+def store_evolution_in(lst):
+    """Returns a callback function to store the evolution of the level sets in
+    the given list.
+    """
+
+    def _store(x):
+        lst.append(np.copy(x))
+
+    return _store
+
+
+# Morphological ACWE
+#image = img_as_float(data.camera())
+
+# Initial level set
+init_ls = checkerboard_level_set(image.shape, 6)
+# List with intermediate results for plotting the evolution
+evolution = []
+callback = store_evolution_in(evolution)
+ls = morphological_chan_vese(image,iterations = 35, init_level_set=init_ls,
+                             smoothing=3, iter_callback=callback)
+
+fig, axes = plt.subplots(1, 1, figsize=(8, 8))
+#ax = axes.flatten()
+
+
+axes.imshow(image, cmap="gray")
+
+axes.set_axis_off()
+axes.contour(ls, [0.5], colors='r')
+
+plt.savefig(r'C:\Users\DCL\OneDrive\Documents\research others\shahed\Orizinal image\3 snake.png',bbox_inches='tight', pad_inches=0)

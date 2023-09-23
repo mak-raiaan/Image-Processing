@@ -1,0 +1,5 @@
+test_load = nib.load(r"C:\Users\DCL\OneDrive\Documents\others\inam\BraTS20_Training_001\BraTS20_Training_001\BraTS20_Training_001_flair.nii").get_fdata()
+print(test_load.shape)
+test = np.rot90(test_load[:,:,100])
+plt.imshow(test)
+plt.show()

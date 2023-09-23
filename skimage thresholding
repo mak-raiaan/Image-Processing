@@ -1,0 +1,36 @@
+#thresholding 
+
+
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+
+import skimage.io
+import skimage.color
+import skimage.filters
+
+
+path = r'C:\Users\DCL\OneDrive\Documents\research others\shahed\Orizinal image\6 open.png'
+image = skimage.io.imread(path)
+gray_image = skimage.color.rgb2gray(image)
+blurred_image = skimage.filters.gaussian(gray_image, sigma=1.0)
+
+histogram, bin_edges = np.histogram(blurred_image, bins=256, range=(0.0, 1.0))
+
+fig, ax = plt.subplots()
+plt.plot(bin_edges[0:-1], histogram)
+plt.title("Grayscale Histogram")
+plt.xlabel("grayscale value")
+plt.ylabel("pixels")
+plt.xlim(0, 1.0)
+plt.show()
+
+#t = 0.2 manual
+
+t = skimage.filters.threshold_otsu(blurred_image)  #automatic
+binary_mask = blurred_image < t
+
+fig, ax = plt.subplots()
+plt.imshow(binary_mask, cmap='gray')
+plt.show()
+#skimage.io.imsave(r"C:\Users\DCL\OneDrive\Documents\research others\shahed\Orizinal image\3 gaussian.png",image)

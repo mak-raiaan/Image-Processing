@@ -1,0 +1,81 @@
+#augmentation 
+
+import os
+from os import listdir
+from os.path import isfile, join
+import numpy as np
+import cv2 
+from scipy import fftpack
+from PIL import Image,ImageEnhance
+import scipy.fftpack
+from skimage import data, io
+from scipy.signal import convolve2d as conv2
+
+
+
+folder1 = '/content/drive/MyDrive/Augmentation/original/skin cancer/Skin Cancer Dataset/train/benign'
+
+dirr1 = '/content/drive/MyDrive/Augmentation/aug/skin cancer/geometric/validation/benign'
+
+dirr2 = '/content/drive/MyDrive/Augmentation/aug/skin cancer/geometric/training/benign'
+
+j=0
+
+for im in os.listdir(folder1):
+    #read image
+    path = os.path.join(folder1,im)
+    img = cv2.imread(path)
+    cv2.imwrite(os.path.join(dirr1,'raw '+str(j)+'.png'),img)
+    #imgg = Image.open(path)
+
+    #augmentation
+    f2= cv2.flip(img,-1)
+    cv2.imwrite(os.path.join(dirr2,'flip2 '+str(j)+'.png'),f2)
+    f3= cv2.flip(img,1)
+
+    cv2.imwrite(os.path.join(dirr2,'flip3 '+str(j)+'.png'),f3)
+
+    f4 = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
+    cv2.imwrite(os.path.join(dirr2,'rotate '+str(j)+'.png'),f4)
+
+    f5 = img[30:194,30:194]
+    cv2.imwrite(os.path.join(dirr2,'zoom '+str(j)+'.png'),f5)
+
+    
+    
+    
+    
+
+#brightness
+    enhancer = ImageEnhance.Brightness(imgg)
+    factor = 0.5 #darkens the image
+    im_output = enhancer.enhance(factor)
+    im_output.save(os.path.join(dirr2,'br_low '+str(j)+'.png'))
+
+    factor = 1.4 #brightens the image
+    im_output = enhancer.enhance(factor)
+    im_output.save(os.path.join(dirr2,'br_high '+str(j)+'.png'))
+    
+
+    #contrast
+    enhancer2 = ImageEnhance.Contrast(imgg)
+    factor = 0.5 #darkens the image
+    im_output = enhancer2.enhance(factor)
+    im_output.save(os.path.join(dirr2,'cntr_low '+str(j)+'.png'))
+
+    factor = 1.4 #brightens the image
+    im_output = enhancer2.enhance(factor)
+    im_output.save(os.path.join(dirr2,'cntr_high '+str(j)+'.png'))
+    
+    j=j+1
+
+print(j)
+      
+      
+      
+      
+      
+      
+      
+      
+  
