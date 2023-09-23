@@ -32,30 +32,60 @@ Welcome to the Image Preprocessing Repository! This collection of image processi
 - [**Morphological Snake**](morphological%20snake): Folder with initial morphological snake scripts.
 - [**Skimage Thresholding**](skimage%20thresholding): Folder containing scripts for skimage thresholding.
 
-## 📚 Additional Resources
-
-For more information on image preprocessing and related topics, you can refer to external resources and documentation. Here are some recommended resources to get you started:
-
-- [OpenCV Documentation](https://opencv.org/documentation/)
-- [Scikit-Image Documentation](https://scikit-image.org/docs/stable/)
-- [NumPy Documentation](https://numpy.org/doc/)
-- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
-
-## 📖 Published Papers
-
-Explore some of our published papers related to image processing and deep learning:
+<details>
+<summary>📚 References</summary>
+<p>
 
 1. **A Lightweight Robust Deep Learning Model Gained High Accuracy in Classifying a Wide Range of Diabetic Retinopathy Images**
    - Link: [Read Paper](https://ieeexplore.ieee.org/abstract/document/10113630)
-   - Cite: @ARTICLE{10113630, author={Raiaan, Mohaimenul Azam Khan and Fatema, Kaniz and Khan, Inam Ullah and Azam, Sami and Rashid, Md. Rafi Ur and Mukta, Md. Saddam Hossain and Jonkman, Mirjam and De Boer, Friso}, journal={IEEE Access}, title={A Lightweight Robust Deep Learning Model Gained High Accuracy in Classifying a Wide Range of Diabetic Retinopathy Images}, year={2023}, volume={11}, number={}, pages={42361-42388}, doi={10.1109/ACCESS.2023.3272228}}
-
+   - Cite:
+     ```bibtex
+     @ARTICLE{10113630,
+       author={Raiaan, Mohaimenul Azam Khan and Fatema, Kaniz and Khan, Inam Ullah and Azam, Sami and Rashid, Md. Rafi Ur and Mukta, Md. Saddam Hossain and Jonkman, Mirjam and De Boer, Friso},
+       journal={IEEE Access},
+       title={A Lightweight Robust Deep Learning Model Gained High Accuracy in Classifying a Wide Range of Diabetic Retinopathy Images},
+       year={2023},
+       volume={11},
+       number={},
+       pages={42361-42388},
+       doi={10.1109/ACCESS.2023.3272228}
+     }
+     ```
+   
 2. **A Computer-Aided Diagnostic System to Identify Diabetic Retinopathy, Utilizing a Modified Compact Convolutional Transformer and Low-Resolution Images to Reduce Computation Time**
    - Link: [Read Paper](https://www.mdpi.com/2227-9059/11/6/1566)
-   - Cite: @article{khan2023computer, title={A Computer-Aided Diagnostic System to Identify Diabetic Retinopathy, Utilizing a Modified Compact Convolutional Transformer and Low-Resolution Images to Reduce Computation Time}, author={Khan, Inam Ullah and Raiaan, Mohaimenul Azam Khan and Fatema, Kaniz and Azam, Sami and Rashid, Rafi ur and Mukta, Saddam Hossain and Jonkman, Mirjam and De Boer, Friso}, journal={Biomedicines}, volume={11}, number={6}, pages={1566}, year={2023}, publisher={MDPI}, doi={10.3390/biomedicines11061566}}
+   - Cite:
+     ```bibtex
+     @article{khan2023computer,
+       title={A Computer-Aided Diagnostic System to Identify Diabetic Retinopathy, Utilizing a Modified Compact Convolutional Transformer and Low-Resolution Images to Reduce Computation Time},
+       author={Khan, Inam Ullah and Raiaan, Mohaimenul Azam Khan and Fatema, Kaniz and Azam, Sami and Rashid, Rafi ur and Mukta, Saddam Hossain and Jonkman, Mirjam and De Boer, Friso},
+       journal={Biomedicines},
+       volume={11},
+       number={6},
+       pages={1566},
+       year={2023},
+       publisher={MDPI},
+       doi={10.3390/biomedicines11061566}
+     }
+     ```
 
 3. **SkinNet-8: An Efficient CNN Architecture for Classifying Skin Cancer on an Imbalanced Dataset**
    - Link: [Read Paper](https://ieeexplore.ieee.org/abstract/document/10101527)
-   - Cite: @INPROCEEDINGS{10101527, author={Fahad, Nur Mohammad and Sakib, Sadman and Khan Raiaan, Mohaimenul Azam and Hossain Mukta, Md. Saddam}, booktitle={2023 International Conference on Electrical, Computer and Communication Engineering (ECCE)}, title={SkinNet-8: An Efficient CNN Architecture for Classifying Skin Cancer on an Imbalanced Dataset}, year={2023}, volume={}, number={}, pages={1-6}, doi={10.1109/ECCE57851.2023.10101527}}
+   - Cite:
+     ```bibtex
+     @INPROCEEDINGS{10101527,
+       author={Fahad, Nur Mohammad and Sakib, Sadman and Khan Raiaan, Mohaimenul Azam and Hossain Mukta, Md. Saddam},
+       booktitle={2023 International Conference on Electrical, Computer and Communication Engineering (ECCE)},
+       title={SkinNet-8: An Efficient CNN Architecture for Classifying Skin Cancer on an Imbalanced Dataset},
+       year={2023},
+       volume={},
+       number={},
+       pages={1-6},
+       doi={10.1109/ECCE57851.2023.10101527}
+     }
+     ```
+</p>
+</details>
 
 ## 📫 How to Reach Me
 
